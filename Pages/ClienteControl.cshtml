@@ -1,0 +1,39 @@
+﻿@page
+@model OpenBank.ViewModel.ClienteViewModel
+@{
+    ViewData["Title"] = "ClienteControl";
+}
+<h3>Cadastro De Clientes</h3>
+
+    <form asp-action="create" method="post">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label" for="nomeCliente">Nome do Cliente</label>
+                        <input type="text" class="form-control" id="nomeCliente" placeholder="Nome do Cliente"
+                               asp-for="@Model.Nome">
+                        <span asp-validation-for="@Model.Nome" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="CPF">CPF</label>
+                        <input type="text" class="form-control" placeholder="CPF"
+                               asp-for="@Model.CPF">
+                        <span asp-validation-for="@Model.CPF" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit"
+                            class="btn btn-success">
+                        Salvar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
